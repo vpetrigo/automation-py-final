@@ -14,6 +14,7 @@ def browser(request):
     options = ChromeOptions()
     options.add_argument(f"--lang={language_to_use}")
     options.add_argument("--no-sandbox")
+    options.add_argument("--headless")
     browser = webdriver.Chrome(options=options)
 
     yield browser
