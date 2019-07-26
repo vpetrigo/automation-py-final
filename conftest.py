@@ -1,4 +1,5 @@
 import pytest
+import os
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as ChromeOptions
@@ -13,8 +14,11 @@ def browser(request):
     language_to_use = request.config.getoption("language")
     options = ChromeOptions()
     options.add_argument(f"--lang={language_to_use}")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--headless")
+
+    if os.getenv("TRAVIS") is not None:
+        options.add_argument("--no-sandbox")
+        options.add_argument("--headless")
+
     browser = webdriver.Chrome(options=options)
 
     yield browser
