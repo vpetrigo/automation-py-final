@@ -12,5 +12,7 @@ before_script:
   - export PATH=`pwd`:$PATH
 
 install: pip install -r requirements.txt
-script: py.test --language=en
+script:
+  - py.test --language=en
+  - py.test -v --tb=line --language=en -m need_review
 

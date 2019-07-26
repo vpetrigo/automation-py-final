@@ -30,6 +30,7 @@ class TestUserAddToCartFromProductPage:
         product_page.open()
         product_page.should_not_see_success_message_upon_opening_product_page()
 
+    @pytest.mark.need_review
     @pytest.mark.parametrize("link", links)
     def test_user_can_add_product_to_cart(self, browser, link: str) -> None:
         product_page = ProductPage(browser, link)
@@ -39,6 +40,7 @@ class TestUserAddToCartFromProductPage:
         product_page.should_check_overall_cost()
 
 
+@pytest.mark.need_review
 @pytest.mark.parametrize("link", links)
 def test_guest_can_add_product_to_cart(browser, link: str) -> None:
     product_page = ProductPage(browser, link)
@@ -79,6 +81,7 @@ def test_guest_should_see_login_link_on_product_page(browser) -> None:
     page.should_be_login_link()
 
 
+@pytest.mark.need_review
 def test_guest_can_go_to_login_page_from_product_page(browser) -> None:
     page = ProductPage(browser, product_link)
     page.open()
@@ -88,6 +91,7 @@ def test_guest_can_go_to_login_page_from_product_page(browser) -> None:
     login_page.should_be_login_page()
 
 
+@pytest.mark.need_review
 def test_guest_cant_see_product_in_cart_opened_from_product_page(browser
                                                                  ) -> None:
     page = ProductPage(browser, product_link)
