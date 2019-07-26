@@ -1,0 +1,13 @@
+language: python
+python: 3.7
+addons:
+  chrome: stable
+
+before_script:
+  - wget http://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip -d .
+  -
+
+install: pip install -r requirements.txt
+script: py.test
+
