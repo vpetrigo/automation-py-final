@@ -24,6 +24,3 @@ class TestLoginFromMainPage:
         cart_page = CartPage(browser, browser.current_url)
         cart_page.should_be_empty()
         cart_page.should_contain_empty_text()
-
-    def test_should_fail(self) -> None:
-        assert False
