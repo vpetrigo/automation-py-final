@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/vpetrigo/automation-py-final.svg?branch=master)](https://travis-ci.com/vpetrigo/automation-py-final)
+
 ## Решение задач курса [Автоматизация тестирования с помощью Selenium и Python][1]
 
 Требования:
