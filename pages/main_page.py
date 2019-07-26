@@ -1,6 +1,6 @@
-from .base_page import BasePage
-
 from selenium.webdriver import Remote
+
+from .base_page import BasePage
 
 
 class MainPage(BasePage):

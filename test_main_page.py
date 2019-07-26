@@ -1,8 +1,8 @@
-from pages.main_page import MainPage
-from pages.login_page import LoginPage
-from pages.cart_page import CartPage
-
 import pytest
+
+from pages.cart_page import CartPage
+from pages.login_page import LoginPage
+from pages.main_page import MainPage
 
 main_page_link = "http://selenium1py.pythonanywhere.com"
 

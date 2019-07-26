@@ -1,13 +1,13 @@
-from .locators import BasePageLocators
-
 import math
 from typing import Sequence
-from selenium.webdriver import Remote
-from selenium.common.exceptions import NoSuchElementException
+
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver import Remote
 from selenium.webdriver.support import expected_conditions as ExpCond
+from selenium.webdriver.support.wait import WebDriverWait
+
+from .locators import BasePageLocators
 
 
 class BasePage:

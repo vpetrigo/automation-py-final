@@ -1,8 +1,8 @@
-from pages.product_page import ProductPage
-from pages.login_page import LoginPage
-from pages.cart_page import CartPage
-
 import pytest
+
+from pages.cart_page import CartPage
+from pages.login_page import LoginPage
+from pages.product_page import ProductPage
 
 links = [
     "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019",
