@@ -13,6 +13,7 @@ def browser(request):
     language_to_use = request.config.getoption("language")
     options = ChromeOptions()
     options.add_argument(f"--lang={language_to_use}")
+    options.add_argument("--no-sandbox")
     browser = webdriver.Chrome(options=options)
 
     yield browser
